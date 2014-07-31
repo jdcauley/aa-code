@@ -1,0 +1,27 @@
+{
+  "name": "Ashe Avenue Code Challenge",
+  "version": "0.0.1",
+  "authors": [
+    "Jordan Cauley"
+  ],
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "harp",
+    "stylus"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets/dependencies",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "~3.0.1"
+  }
+}

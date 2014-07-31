@@ -1,0 +1,18 @@
+main.container.content
+  section
+    #slider.slider
+      .slide.active
+        img(src="#{ site_url}assets/img/kitty-1.jpg")
+      .slide
+        img(src="#{ site_url}assets/img/kitty-2.jpg")
+      .slide
+        img(src="#{ site_url}assets/img/kitty-3.jpg")
+      a#left-control.slide-control.left(href="#next-left")
+      a#right-control.slide-control.right(href="#next-right")
+
+  section.col.two-thirds
+    :markdown
+      ### Post Header
+      Post body
+
+  aside.col.one-third
