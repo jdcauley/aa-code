@@ -4,17 +4,29 @@
 brand-primary = #d10077
 light-gray = #ecf0f1
 white = #fff
+brand-dark = #333
 
 *
   -webkit-box-sizing border-box
   -moz-box-sizing border-box
   box-sizing border-box
 
+.col, .container
+  &:after
+    content "."
+    display block
+    clear both
+    visibility hidden
+    line-height 0
+    height 0
+
+
 /* ============================
    Grid
    ============================ */
 
 .container
+  position relative
   display block
   height auto
   width 100%
@@ -26,6 +38,7 @@ white = #fff
   display inline-block
   height auto
   padding 10px
+  width 100%
   float left
 
 .half
@@ -48,42 +61,36 @@ white = #fff
     width 50%
 
   &.quarter
-    width 25%
+    width 30%
 
   &.three-quarters
-    width 75%
-
-  &.three-quarters
-    width 75%
+    width 70%
 
   &.one-third
-    width 33%
+    width 38%
 
   &.two-thirds
-    width 66%
+    width 62%
 
 .img-fit
   width 100%
   max-width 100%
 
-@media (min-width: 500px)
+@media screen and (min-width: 700px)
   .half
     width 50%
 
   .quarter
-    width 25%
+    width 30%
 
   .three-quarters
-    width 75%
-
-  .three-quarters
-    width 75%
+    width 70%
 
   .one-third
-    width 33%
+    width 38%
 
   .two-thirds
-    width 66%
+    width 62%
 
   .small
     width auto
@@ -95,6 +102,14 @@ white = #fff
 body
   background light-gray
   font-family 'Arial' 'Helvetica' 'sans-serif'
+
+ul
+  list-style-type: disc;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-start: 0;
 
 /* ============================
    Slider
@@ -162,40 +177,123 @@ body
 .main-header
   width 100%
   min-height 110px
-  padding 10px 0
   background brand-primary
 
 .branding
   display inline-block
-  float left
+  height auto
+  width 154px
+  padding 10px 0
   .logo
     img
-      display inline-block
+      display block
       width 100%
       max-width 100%
 
 .main-nav
+  position relative
+  display none
+  height auto
+  width 70%
+  float right
+  z-index 10
+  &.active
+    display block
+  @media screen and (min-width: 600px)
+    display block
   ul
-    display inline-block
-    float right
+    position absolute
+    top 0
+    right 0
+    background brand-primary
     li
-      display inline-block
-      padding 15px 25px
+      display block
+      padding 15px 10px
+      &:last-child{
+        padding-right 5px
+      }
+      @media screen and (min-width: 600px)
+        display inline-block
+        padding 15px 12px
+      @media screen and (min-width: 900px)
+        padding 15px 30px
+
       a
         color white
         font-size 18px
         vertical-align middle
         text-decoration none
 
+.toggle
+  display block
+  position absolute
+  top 40px
+  right 40px
+  height 25px
+  width 25px
+  @media screen and (min-width: 600px)
+    display none
+  .bar
+    display block
+    position absolute
+    top 10px
+    left 0
+    height 5px
+    width 30px
+    background white
+    &:first-child
+      top 0
+    &:last-child
+      top 20px
 /* ============================
-   content
+   Main
    ============================ */
 
 .content
+  position relative
   background white
 
 .post-box
   min-height 200px
   h1
     margin-top 0
+    font-size 26px
     font-weight 500
+
+/* ============================
+   Aside
+   ============================ */
+
+.aside-post
+  min-height 130px
+  @media screen and (min-width: 415px)
+    min-height 160px
+  @media screen and (min-width: 700px)
+    min-height 120px
+  img
+    display block
+    height auto
+    max-width 125px
+    margin-left auto
+    margin-right auto
+  h3
+    margin-top 0
+    font-weight 600
+
+.aisde-header
+  padding 0 10px
+  margin-top 0
+
+/* ============================
+   Footer
+   ============================ */
+
+.main-footer
+  padding 40px 20px
+  color white
+  text-align center
+  background brand-dark
+  @media screen and (min-width: 700px)
+    text-align left
+  @media screen and (min-width: 1000px)
+    padding 40px 0

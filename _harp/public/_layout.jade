@@ -9,7 +9,11 @@ html
           .branding
             a.logo(href="#{ site_url }")
               img(src="#{ site_url }assets/img/logo.png")
-          nav.main-nav
+          #toggle.toggle
+            span.bar
+            span.bar
+            span.bar
+          nav#nav.main-nav
             ul
               li
                 a(href="/") Home
@@ -21,5 +25,9 @@ html
                 a(href="/") Contact Us
 
     != yield
+    footer.main-footer
+      .container
+        p &copy 2013 Acme
+
 
     script(src="#{ site_url }assets/js/slide.js").

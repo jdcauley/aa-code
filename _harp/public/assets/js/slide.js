@@ -1,26 +1,14 @@
-  var slider = document.getElementById('slider');
-  /*
-  slideHeights = []
-  for (var i = 0; i < slides.length; i++){
-    slides[i].setAttribute('data-index', i);
-    height = window.getComputedStyle(slides[i], null).getPropertyValue('height').replace("px", "")
-    slideHeights.push(height);
-  }
-	var tallest = Math.max.apply( null, slideHeights );
-  slider.style.height=tallest+'px' ;
-  */
-  var theSlides = document.getElementsByClassName('slide');
+function theSlideShow(carouselId){
+  var slider = document.getElementById(carouselId);
+  var theSlides = slider.getElementsByClassName('slide');
   var allSlides = []
   for (var i = 0; i < theSlides.length; i++){
+    theSlides[i].setAttribute('data-index', i);
     var slideNumber = theSlides[i];
     allSlides.push(slideNumber);
   }
   function slideRight() {
-    console.log('right-click');
-
-    var activeSlide = document.querySelectorAll('.slide.active');
-    console.log(activeSlide);
-
+    var activeSlide = slider.querySelectorAll('.slide.active');
     for (var i = 0; i < activeSlide.length; i++){
       var currentSlide = activeSlide[i];
       var slideIndex = activeSlide[i].getAttribute('data-index');
@@ -42,7 +30,7 @@
     window.setTimeout(nextActiveClasses, 25);
   }
   function slideLeft() {
-    var activeSlide = document.querySelectorAll('.slide.active');
+    var activeSlide = slider.querySelectorAll('.slide.active');
     for (var i = 0; i < activeSlide.length; i++){
       var currentSlide = activeSlide[i];
       var slideIndex = activeSlide[i].getAttribute('data-index');
@@ -65,3 +53,25 @@
   }
   document.getElementById('left-control').addEventListener("click", slideLeft, false);
   document.getElementById('right-control').addEventListener("click", slideRight, false);
+}
+// initialize the slider the slider id
+theSlideShow('slider');
+
+function mobileNav(navId){
+  var nav = document.getElementById(navId);
+
+  function toggle(){
+    console.log(nav.className);
+    if(nav.className == 'main-nav active'){
+      console.log('if');
+      nav.className = nav.className.replace(" active", "");
+    } else {
+      console.log('else');
+      nav.className = nav.className + ' active';
+    }
+
+  }
+
+  document.getElementById('toggle').addEventListener("click", toggle, false);
+}
+mobileNav('nav')

@@ -1,40 +1,69 @@
+section.container.carousel
+  #slider.slider
+    .slide.active
+      img(src="#{ site_url}assets/img/kitty-1.jpg")
+    .slide
+      img(src="#{ site_url}assets/img/kitty-2.jpg")
+    .slide
+      img(src="#{ site_url}assets/img/kitty-3.jpg")
+    a#left-control.slide-control.left(href="#next-left")
+    a#right-control.slide-control.right(href="#next-right")
+
 main.container.content
-  section.carousel
-    #slider.slider
-      .slide.active
-        img(src="#{ site_url}assets/img/kitty-1.jpg")
-      .slide
-        img(src="#{ site_url}assets/img/kitty-2.jpg")
-      .slide
-        img(src="#{ site_url}assets/img/kitty-3.jpg")
-      a#left-control.slide-control.left(href="#next-left")
-      a#right-control.slide-control.right(href="#next-right")
   section.col.two-thirds
-    .post-box
+    article.post-box
       .col.one-third.small
         img.img-fit(src="#{ site_url}assets/img/post-1.jpg")
       .col.two-thirds.small
         :markdown
-          # Post Header
-          Post body
+          # Excepteur sint occaecat cupidatat non proident
+          Lorem ipsum dolor sit amet, consectetur adipiscicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
 
-    .post-box
+    article.post-box
       .col.one-third.small
         img.img-fit(src="#{ site_url}assets/img/post-2.jpg")
-      .col.two-thirds
+      .col.two-thirds.small
         :markdown
-          # Post Header
-          Post body
+          # Excepteur sint occaecat cupidatat non proident
+          Lorem ipsum dolor sit amet, consectetur adipiscicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
 
-    .post-box
+    article.post-box
       .col.one-third.small
         img.img-fit(src="#{ site_url}assets/img/post-3.jpg")
-      .col.two-thirds
+      .col.two-thirds.small
         :markdown
-          # Post Header
-          Post body
+          # Excepteur sint occaecat cupidatat non proident
+          Lorem ipsum dolor sit amet, consectetur adipiscicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
 
   aside.col.one-third
-    :markdown
-      ## TEXT
-      lorem ipsum domina super duper sons a jjealfs
+    h2.aside-header Top Stories
+    article.aside-post
+      .col.quarter.small
+        img.img-fit(src="#{ site_url }assets/img/sidebar-1.jpg")
+      .col.three-quarters.small
+        :markdown
+          ### Lorem ipsum dolor sit amet
+    article.aside-post
+      .col.quarter.small
+        img.img-fit(src="#{ site_url }assets/img/sidebar-2.jpg")
+      .col.three-quarters.small
+        :markdown
+          ### Lorem ipsum dolor sit amet
+    article.aside-post
+      .col.quarter.small
+        img.img-fit(src="#{ site_url }assets/img/sidebar-3.jpg")
+      .col.three-quarters.small
+        :markdown
+          ### Lorem ipsum dolor sit amet
+    article.aside-post
+      .col.quarter.small
+        img.img-fit(src="#{ site_url }assets/img/sidebar-4.jpg")
+      .col.three-quarters.small
+        :markdown
+          ### Lorem ipsum dolor sit amet
+    article.aside-post
+      .col.quarter.small
+        img.img-fit(src="#{ site_url }assets/img/sidebar-5.jpg")
+      .col.three-quarters.small
+        :markdown
+          ### Lorem ipsum dolor sit amet
