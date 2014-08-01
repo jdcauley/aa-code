@@ -1,5 +1,5 @@
 main.container.content
-  section
+  section.carousel
     #slider.slider
       .slide.active
         img(src="#{ site_url}assets/img/kitty-1.jpg")
@@ -9,10 +9,32 @@ main.container.content
         img(src="#{ site_url}assets/img/kitty-3.jpg")
       a#left-control.slide-control.left(href="#next-left")
       a#right-control.slide-control.right(href="#next-right")
-
   section.col.two-thirds
-    :markdown
-      ### Post Header
-      Post body
+    .post-box
+      .col.one-third.small
+        img.img-fit(src="#{ site_url}assets/img/post-1.jpg")
+      .col.two-thirds.small
+        :markdown
+          # Post Header
+          Post body
+
+    .post-box
+      .col.one-third.small
+        img.img-fit(src="#{ site_url}assets/img/post-2.jpg")
+      .col.two-thirds
+        :markdown
+          # Post Header
+          Post body
+
+    .post-box
+      .col.one-third.small
+        img.img-fit(src="#{ site_url}assets/img/post-3.jpg")
+      .col.two-thirds
+        :markdown
+          # Post Header
+          Post body
 
   aside.col.one-third
+    :markdown
+      ## TEXT
+      lorem ipsum domina super duper sons a jjealfs

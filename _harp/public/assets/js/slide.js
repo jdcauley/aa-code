@@ -1,5 +1,5 @@
   var slider = document.getElementById('slider');
-  var slides = document.getElementsByClassName('slide');
+  /*
   slideHeights = []
   for (var i = 0; i < slides.length; i++){
     slides[i].setAttribute('data-index', i);
@@ -8,6 +8,7 @@
   }
 	var tallest = Math.max.apply( null, slideHeights );
   slider.style.height=tallest+'px' ;
+  */
   var theSlides = document.getElementsByClassName('slide');
   var allSlides = []
   for (var i = 0; i < theSlides.length; i++){

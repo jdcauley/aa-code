@@ -3,10 +3,22 @@ html
   head
     link(rel="stylesheet" href="#{ site_url }assets/css/app.css")
   body
-
     header
-      .main-nav
-
+      .main-header
+        .container
+          .branding
+            a.logo(href="#{ site_url }")
+              img(src="#{ site_url }assets/img/logo.png")
+          nav.main-nav
+            ul
+              li
+                a(href="/") Home
+              li
+                a(href="/") Company
+              li
+                a(href="/") Our Widgets
+              li
+                a(href="/") Contact Us
 
     != yield
 
