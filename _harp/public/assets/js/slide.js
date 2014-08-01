@@ -54,8 +54,6 @@ function theSlideShow(carouselId){
   document.getElementById('left-control').addEventListener("click", slideLeft, false);
   document.getElementById('right-control').addEventListener("click", slideRight, false);
 }
-// initialize the slider the slider id
-theSlideShow('slider');
 
 function mobileNav(navId){
   var nav = document.getElementById(navId);
@@ -74,4 +72,8 @@ function mobileNav(navId){
 
   document.getElementById('toggle').addEventListener("click", toggle, false);
 }
+// initialize the slider with the slider id
+theSlideShow('slider');
+
+// initialize the mobile nav with the mobile nav id
 mobileNav('nav')
